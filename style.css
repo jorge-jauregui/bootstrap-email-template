@@ -4,6 +4,9 @@ body {
     background-color: #2a3950;
     font-family: 'Quicksand', sans-serif;
 }
+div.row {
+    height: 100vh;
+}
 
 /*
 NAVBAR
@@ -36,7 +39,6 @@ div.side-menu {
     padding-left:0;
     padding-right: 0;
     background-color: #344764;
-    height: 100vh;
 }
 img.user-icon {
     margin-top: 20px;
@@ -70,10 +72,11 @@ li.selected {
 COLUMN 2
 */
 div.email-list {
-    margin-top: 30px;
     padding-right: 30px;
 }
 div.input-group{
+    margin-top: 30px;
+
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -118,17 +121,13 @@ span.date-time {
 COLUMN 3
 */
 div.email-detail{
-    margin-top: 20px;
-    padding-left: 30px;
-    padding-right: 20px;
-    margin-bottom: 20px;
+    padding: 30px 30px 20px 20px;
 }
 div.to-from {
     color: white;
     font-size: 12px;
     line-height: 0.5;
     padding-top: 20px;
-    padding-bottom: 10px;
 }
 h1.email-header {
     font-size: 20px;
