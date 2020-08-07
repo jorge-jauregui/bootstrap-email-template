@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Template - Jorge Jauregui Gallo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> <!--bootstrap-->
+    <link rel="stylesheet" href="style.css"> <!--css-->
+</head>
+
+<body>
+    <!-- The navbar below replaces column 1 menu at lg breakpoint for improved mobile navigation. See bootstrap display property link below -->
+        <!-- https://getbootstrap.com/docs/4.0/utilities/display/ -->
+    <div class="d-lg-none">
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <button class="btn btn-info navbar-compose">Compose</button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Inbox (1)<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tagged</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Important</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sent Email</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Drafts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Trash</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+
+    <div class="container-fluid">
+        <div class="row h-100">
+        <!--COLUMN 1 (hidden below lg breakpoint)-->
+            <div class="col-lg-2 side-menu d-none d-lg-block">
+                <div class="card border-0">
+                    <ul class="list-group ">
+                        <img class="user-icon" src="images/user.svg" height="100px">
+                        <h6 class="welcome">Welcome, Jorge!</h6>
+                        <button class="btn btn-info mx-auto compose">Compose</button>
+                        <li class="list-group-item border-0">Inbox (1)</li>
+                        <li class="list-group-item border-0">Tagged</li>
+                        <li class="list-group-item border-0 selected">Important</li>
+                        <li class="list-group-item border-0">Sent Mail</li>
+                        <li class="list-group-item border-0">Drafts</li>
+                        <li class="list-group-item border-0">Trash</li>
+                    </ul>
+                </div>
+            </div>
+
+        <!--COLUMN 2-->
+            <div class="col-lg-4 email-list">
+                <!--Search bar-->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control search-emails" placeholder="Search for emails..." aria-describedby="basic-addon2">
+                    <div class="input-group-append search-emails">
+                        <button class="btn btn-info" type="button">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                                <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                            </svg>
+                         </button>
+                    </div>
+                </div>
+
+                <!--Email cards-->
+                <div class="card email-card w-100">
+                    <div class="card-body">
+                        <span class="date-time">Aug 5, 2020</span>
+                        <h5 class="card-title">We've Updated our Terms of Service and our...</h5>
+                        <p class="card-text">Hello, We're emailing you to let you know about updates to our Terms of...</p>
+                    </div>
+                </div>
+
+                <div class="card email-card w-100">
+                    <div class="card-body">
+                        <span class="date-time">Aug 3, 2020</span>
+                        <h5 class="card-title">LinkedIn</h5>
+                        <p class="card-text">You have a new connection request.</p>
+                    </div>
+                </div>
+
+                <div class="card email-card w-100 selected-email">
+                    <div class="card-body">
+                        <span class="date-time">Aug 3, 2020</span>
+                        <h5 class="card-title">Important updates about GDPR compliance</h5>
+                        <p class="card-text">Dear Partner, As a result of the recent Court of Justice of the European...</p>
+                    </div>
+                </div>
+
+                <div class="card email-card w-100">
+                    <div class="card-body">
+                        <span class="date-time">Jun 29, 2020</span>
+                      <h5 class="card-title">Congratulations!</h5>
+                      <p class="card-text">You have been accepted into the July 6th, 2020 Cohort 207 of Bay Valley...</p>
+                    </div>
+                </div>
+
+            </div>
+
+        <!---COLUMN 3-->
+            <div class="col-lg-6 email-detail">
+
+                <div class="to-from">
+                    <p class="to">To: jorgejaureguigallo@gmail.com</p>
+                    <p class="from">From: ads-account-noreply@google.com</p>
+                </div>
+
+                <div class="email-header">
+                    <div class="email-actions">
+                        <h1 class="email-header">Important updates about GDPR compliance</h1>
+                        <span class="email-actions"> <!--Trash, reply icon SVGs-->
+                            <svg class="email-action" width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                            </svg>
+
+                            <svg class="email-action" width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-reply" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M9.502 5.013a.144.144 0 0 0-.202.134V6.3a.5.5 0 0 1-.5.5c-.667 0-2.013.005-3.3.822-.984.624-1.99 1.76-2.595 3.876C3.925 10.515 5.09 9.982 6.11 9.7a8.741 8.741 0 0 1 1.921-.306 7.403 7.403 0 0 1 .798.008h.013l.005.001h.001L8.8 9.9l.05-.498a.5.5 0 0 1 .45.498v1.153c0 .108.11.176.202.134l3.984-2.933a.494.494 0 0 1 .042-.028.147.147 0 0 0 0-.252.494.494 0 0 1-.042-.028L9.502 5.013zM8.3 10.386a7.745 7.745 0 0 0-1.923.277c-1.326.368-2.896 1.201-3.94 3.08a.5.5 0 0 1-.933-.305c.464-3.71 1.886-5.662 3.46-6.66 1.245-.79 2.527-.942 3.336-.971v-.66a1.144 1.144 0 0 1 1.767-.96l3.994 2.94a1.147 1.147 0 0 1 0 1.946l-3.994 2.94a1.144 1.144 0 0 1-1.767-.96v-.667z"/>
+                            </svg>
+
+                            <svg class="email-action" width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-three-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="email-body">
+                    <p class="email-body">
+                        As a result of the recent Court of Justice of the European Union ruling on data transfers, invalidating 
+                        the Privacy Shield, Google will be moving to Standard Contractual Clauses (SCCs) for transfers of 
+                        online advertising and measurement personal data out of the Europe Economic Area, Switzerland and the UK.
+                    </p>
+                    <p class="email-body">
+                        We will therefore be updating our existing Google Ads Data Processing Terms, Google Ads Controller-Controller 
+                        Data Protection Terms and Google Measurement Controller-Controller Data Protection Terms to add the relevant 
+                        SCCs as adopted by the European Commission.
+                    </p>
+                    <p class="email-body">
+                        We are making these updates solely to address GDPR compliance. The updates do not give Google additional rights 
+                        over data. If the Google Ads Data Processing Terms or Google Ads Controller-Controller Data Protection Terms are 
+                        already part of your contract (or if you have separately accepted the Google Measurement Controller-Controller 
+                        Data Protection Terms where available), the updates will apply from August 12, 2020.
+
+                    </p>
+                </div>
+
+                <div class="form-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="9" placeholder="Your reply..."></textarea>
+                </div>
+
+                <div class="reply-actions">
+                    <svg class="attachment" width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-paperclip" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z"/>
+                    </svg>
+                    <button class="btn btn-info reply" type="button">Reply</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!---These imports are needed for navbar menu to work-->
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+</body>
+</html>
