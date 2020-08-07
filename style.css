@@ -170,19 +170,3 @@ button.reply {
     float: right;
 }
 
-/*
-MOBILE
-*/
-@media screen and (max-width: 991px) {
-    body {
-      overflow-y: visible;
-    }
-}
-@media screen and (max-height: 700px) {
-    body {
-        overflow-y: visible;
-        margin: 0;
-    }
-}
-
-
